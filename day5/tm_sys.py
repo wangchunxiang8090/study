@@ -17,7 +17,7 @@ for i in res:
 
 import os
 import shutil
-src = open('tm.py','r',encoding="utf-8")
+src = open('temporary.py','r',encoding="utf-8")
 dst = open('tm_copy.py','w',)
 dst = open('tm_file.py','w',)
 dst = open('tm_file.py','w',)
