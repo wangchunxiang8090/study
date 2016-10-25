@@ -9,3 +9,5 @@ try:
     print(u'当前在线人数：%s' %result["num"])
 except Exception,e:
     print("不能连接到 Base Server",e)
+
+
