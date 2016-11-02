@@ -4,8 +4,9 @@
 import re
 import time
 import datetime
+
 def nginx_tiem_replace(tm):
-    struct_time = time.strptime(tm,'%m/%b/%Y:%H:%M:%S ')
+    struct_time = time.strptime(tm,'%d/%b/%Y:%H:%M:%S ')
     return time.strftime("%Y-%m-%d %H:%M:%S ",struct_time)
 
 def replace_after_data(filename):
@@ -19,14 +20,5 @@ def replace_after_data(filename):
             except Exception as e:
                 pass
     return data
-x = replace_after_data(r"C:\Users\wangcx\Desktop\nginx.log")
-for i in x:
-    print(i)
 
-# for i in x:
-#     data = re.search('.*([0-9]{4}-[0-9]{1,2}-[0-9]{2}).*',i)
-#     print(data.groups())
-    # for i in range(1,31):
-    #     date = datetime.date.today() - datetime.timedelta(days=i)
-    #     if date == data.groups()[0]:
-    #         print(i)
+x = replace_after_data(r"C:\Users\wangcx\Desktop\nginx.log")
