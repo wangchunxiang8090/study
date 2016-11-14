@@ -18,7 +18,7 @@ url = {
     'http://www.zfwx.com/wxgr/':0,
     'http://www.zfwx.com/wxqt/':0
 }
-start = time.time()
+
 def nginx_tiem_replace(tm):
     """
     将nginx的标准日期格式的时间转换成 年-月-日的格式并返回
@@ -55,7 +55,7 @@ def last_month(filename,number):
     return data
 
 def need_data(filename,number):
-    #data = last_month(filename,number)
+    data = last_month(filename,number)
     if os.path.isfile(filename):
         with open(filename,'r') as f:
             for line in f:
@@ -70,5 +70,3 @@ def need_data(filename,number):
 need_data(r'C:\Users\djn1\Desktop\t.log',30)
 for i in url:
     print(i,url[i])
-
-print(time.time()-start)
